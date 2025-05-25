@@ -1,0 +1,1046 @@
+:root {
+  --pri: #0f172a;
+  --sec: #f8fafc;
+  --ter2: #cbd5e1;
+  --ter1: #e2e8f0;
+  --acc: #6366f1;
+
+  --success: #10b981;
+  --warn: #fbbf24;
+  --danger: #ef4444;
+  --info: #3b82f6;
+
+  --pad: clamp(1rem, 2vw, 2rem);
+  --gap: clamp(0.75rem, 2vw, 1.5rem);
+  --radius: 0.625rem;
+
+  --input-font: clamp(0.9rem, 1.5vw, 1.4rem);
+  --btn-font: clamp(1rem, 2.5vw, 1.5rem);
+  --sm-btn-font: clamp(0.8rem, 1.5vw, 1rem);
+  --h2-font: clamp(1.25rem, 3vw, 2.0625rem);
+  --section-font: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: eu, sans-serif;
+  color: var(--pri);
+}
+
+body {
+  line-height: 1.6;
+  min-height: 120%;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@font-face {
+  font-family: eu;
+  src: url(fonts/EudoxusSans-Bold-BF659b6cb1408e5.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: eu;
+  src: url(fonts/EudoxusSans-ExtraBold-BF659b6cb1b96c9.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: eu;
+  src: url(fonts/EudoxusSans-ExtraLight-BF659b6cb1e7092.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: eu;
+  src: url(fonts/EudoxusSans-Light-BF659b6cb2036b5.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: eu;
+  src: url(fonts/EudoxusSans-Medium-BF659b6cb1c14cb.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: eu;
+  src: url(fonts/EudoxusSans-Regular-BF659b6cb1d4714.ttf);
+  font-weight: 400;
+}
+
+#main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--sec);
+  margin-top: 6rem;
+}
+
+section.allElems {
+  padding: clamp(1rem, 5vw, 3rem);
+  background-color: var(--ter2);
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: absolute;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.allElems header {
+  background-image: url(https://images.unsplash.com/photo-1463947628408-f8581a2f4aca?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-bottom: 2.6rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 4rem;
+  height: 350px;
+}
+
+header .header1 h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+header .header1 h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+header .header1 h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+header .header2 h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+header .header2 h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+header .header2 h4 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.allElems .allFeatures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: clamp(1rem, 4vw, 3rem);
+}
+
+.elem {
+  background-color: var(--acc);
+  border-radius: clamp(0.5rem, 1vw, 1rem);
+  width: clamp(10rem, 28vw, 15rem);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.elem h2 {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-weight: 500;
+  font-size: var(--h2-font);
+}
+
+.elem:active {
+  scale: 0.95;
+}
+
+.fullElem {
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  padding: var(--pad);
+  background: var(--ter2);
+  display: none;
+  position: absolute;
+  overflow-y: auto;
+  top: 0;
+  z-index: 9999;
+}
+
+.back {
+  position: absolute;
+  right: 5%;
+  background-color: var(--acc);
+  border-radius: var(--radius);
+  padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem);
+  border: none;
+  font-size: var(--btn-font);
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--sec);
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  background-color: var(--danger);
+}
+
+.back:active {
+  scale: 0.97;
+}
+
+.todo-list-fullpage h2 {
+  font-size: var(--h2-font);
+}
+
+.todo-list-fullpage .todo-container {
+  height: 85%;
+  width: 100%;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 790px) {
+  .todo-list-fullpage .todo-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 90%;
+  }
+
+  .todo-list-fullpage .todo-container .addTask,
+  .todo-list-fullpage .todo-container .allTask {
+    width: 100% !important;
+  }
+}
+
+.todo-list-fullpage .todo-container .addTask {
+  width: 35%;
+  background-color: var(--ter1);
+  height: 100%;
+  border-radius: 0.8rem;
+}
+
+.todo-list-fullpage .todo-container .allTask {
+  width: 65%;
+  background-color: var(--ter1);
+  height: 100%;
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: var(--pad);
+  overflow: auto;
+}
+
+.todo-list-fullpage .todo-container .addTask form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: var(--pad);
+}
+
+.todo-container .addTask form input#task-input,
+.todo-container .addTask form textarea {
+  padding: var(--pad);
+  width: 100%;
+  font-size: var(--input-font);
+  background-color: var(--sec);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.todo-container .addTask form button {
+  padding: var(--pad);
+  width: 100%;
+  font-size: var(--input-font);
+  background-color: var(--ter2);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.todo-container .addTask form button:active {
+  scale: 0.96;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--sec);
+  padding: 0.8rem 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.task h5 {
+  color: var(--pri);
+  font-size: var(--btn-font);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task h5 span {
+  color: var(--sec);
+  background-color: var(--warn);
+  padding: 3px 5px;
+  border-radius: 0.5rem;
+  font-size: 10px;
+}
+
+.task h5 span.true {
+  background-color: var(--danger);
+}
+
+.task h5 span.false {
+  display: none;
+}
+
+.task button {
+  padding: 0.8rem 1rem;
+  color: var(--sec);
+  background-color: var(--success);
+  border: none;
+  font-size: var(--sm-btn-font);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.task button.danger {
+  background-color: var(--danger);
+}
+
+.task button.info {
+  background-color: var(--info);
+}
+
+.task button:active {
+  scale: 0.95;
+}
+
+.mark-imp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  gap: 1.5rem;
+}
+
+.mark-imp input {
+  scale: 1.5;
+}
+
+.mark-imp label {
+  font-size: var(--input-font);
+}
+
+.details-box {
+  margin-top: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--sec);
+  border-left: 3px solid var(--info);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  font-size: 0.95rem;
+  margin: 0 1rem;
+}
+
+.details-box summary {
+  cursor: pointer;
+  padding: 10px 12px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--sec);
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.details-box summary:hover {
+  background-color: var(--ter2);
+}
+
+.details-box[open] summary {
+  background-color: var(--sec);
+}
+
+.details-box p {
+  margin: 0;
+  padding: 10px 12px;
+  line-height: 1.4;
+  color: #444;
+  word-wrap: break-word;
+}
+
+.details-box summary::after {
+  content: "▶";
+  font-size: 0.75rem;
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.details-box[open] summary::after {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 600px) {
+  .details-box {
+    font-size: 0.85rem;
+    border-left-width: 2px;
+  }
+
+  .details-box summary,
+  .details-box p {
+    padding: 8px 10px;
+  }
+
+  .details-box summary::after {
+    font-size: 0.7rem;
+    margin-left: 6px;
+  }
+}
+
+.daily-planner-fullpage {
+  background-color: var(--ter2);
+}
+
+.daily-planner-fullpage h2 {
+  font-size: var(--section-font);
+}
+
+.daily-planner-fullpage .day-planner {
+  background-color: var(--ter1);
+  height: 85%;
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 0.8rem;
+  padding: var(--pad);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.daily-planner-fullpage .day-planner .day-planner-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 0.9rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 calc(50% - 1rem);
+  flex: 1 1 calc(50% - 1rem);
+}
+
+@media (max-width: 600px) {
+  .daily-planner-fullpage .day-planner .day-planner-time {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.day-planner .day-planner-time p {
+  position: absolute;
+  top: 8%;
+  font-size: var(--input-font);
+  left: 1%;
+}
+
+.day-planner .day-planner-time input {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: var(--sec);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: var(--input-font);
+  outline: none;
+  padding-top: 2.2rem;
+  color: var(--pri);
+}
+
+.motivation-fullPage-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.motivational-fullpage .motivation-container {
+  height: 500px;
+  width: 80%;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.motivational-fullpage .motivation-container::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--ter1);
+  border-radius: 50px;
+  scale: 1.15;
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  z-index: 8;
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  border-radius: 40px;
+  padding: 1.2rem;
+  border: 3px solid var(--pri);
+}
+
+.motivation-one {
+  background-color: var(--pri);
+  border-radius: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.motivation-one h2 {
+  background-color: var(--success);
+  padding: 1rem;
+  border: 2px solid var(--pri);
+  border-radius: 0.9rem;
+  font-size: var(--input-font);
+  font-weight: 500;
+  text-align: right;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.motivation-two {
+  padding: 0.5rem;
+}
+
+.motivation-two h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--pri);
+}
+
+.motivation-three {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.motivation-three h2 {
+  background-color: var(--warn);
+  padding: 1rem;
+  border: 2px solid var(--pri);
+  border-radius: 0.9rem;
+  margin-top: 1rem;
+  font-size: var(--input-font);
+  font-weight: 500;
+  text-align: right;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper img {
+  position: absolute;
+  right: 5%;
+  opacity: 0.2;
+  top: 5%;
+  height: 5rem;
+}
+
+.pomodoro-fullpage {
+  background-color: var(--ter2);
+}
+
+.pomodoro-fullpage h1 {
+  font-size: var(--section-font);
+}
+
+.pomodoro-fullpage .pomo-timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.pomo-timer h1 {
+  font-size: 8rem;
+}
+
+.pomo-timer button {
+  background-color: var(--success);
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  margin: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  -webkit-box-shadow: 5px 5px 0px var(--pri);
+  box-shadow: 5px 5px 0px var(--pri);
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.pomo-timer button:active {
+  -webkit-box-shadow: 0px 0px 0px black;
+  box-shadow: 0px 0px 0px black;
+}
+
+.pomodoro-fullpage .session {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background: var(--info);
+  color: var(--sec);
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+}
+
+.daily-goals-fullpage {
+  height: 100vh;
+  width: 100%;
+  padding: var(--pad);
+  display: none;
+  position: absolute;
+  overflow-y: auto;
+  background-color: var(--ter2);
+}
+
+.daily-goals-fullpage h2 {
+  font-size: var(--h2-font);
+}
+
+.daily-goals-fullpage .goals-container {
+  height: 85%;
+  width: 100%;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 790px) {
+  .daily-goals-fullpage .goals-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 90%;
+  }
+
+  .daily-goals-fullpage .goals-container .addGoal,
+  .daily-goals-fullpage .goals-container .allGoals {
+    width: 100% !important;
+  }
+}
+
+.daily-goals-fullpage .goals-container .addGoal {
+  width: 35%;
+  background-color: var(--ter1);
+  height: 100%;
+  border-radius: 0.8rem;
+}
+
+.daily-goals-fullpage .goals-container .allGoals {
+  width: 65%;
+  background-color: var(--ter1);
+  height: 100%;
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: var(--pad);
+  overflow-y: auto;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.daily-goals-fullpage .goals-container .addGoal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: var(--pad);
+}
+
+.goals-container .addGoal form input#goal-input,
+.goals-container .addGoal form textarea {
+  padding: var(--pad);
+  width: 100%;
+  font-size: var(--input-font);
+  background-color: var(--ter2);
+  color: var(--pri);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.goals-container .addGoal form button {
+  padding: var(--pad);
+  width: 100%;
+  font-size: var(--input-font);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  background-color: var(--ter2);
+}
+
+.goals-container .addGoal form button:active {
+  scale: 0.96;
+}
+
+.mark-imp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  gap: 1.5rem;
+}
+
+.mark-imp input {
+  scale: 1.5;
+}
+
+.mark-imp label {
+  font-size: var(--input-font);
+}
+
+.sticky-note {
+  background-color: var(--ter2);
+  width: 200px;
+  min-height: 160px;
+  padding: 1rem;
+  border-radius: 8px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(-1.5deg);
+  -ms-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  word-wrap: break-word;
+  margin-bottom: 1rem;
+}
+
+.sticky-note h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--pri);
+}
+
+.sticky-note h5 span {
+  background-color: var(--danger);
+  color: var(--pri);
+  padding: 3px 6px;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.sticky-note .details-box {
+  background-color: var(--ter2);
+  color: var(--pri);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.sticky-note .details-box summary {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-weight: 600;
+  background-color: var(--info);
+  border-radius: 0.3rem;
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.sticky-note .details-box p {
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: var(--sec);
+  color: var(--pri);
+  line-height: 1.4;
+}
+
+.sticky-note button {
+  background-color: var(--success);
+  color: var(--sec);
+  border: none;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.sticky-note button:hover {
+  background-color: var(--info);
+}
+
+nav {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--ter2);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+nav .nav-in {
+  padding: 0.5rem 3.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--ter1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.theme {
+  background-color: var(--ter2);
+  color: var(--sec);
+  padding: 5px 17px;
+  border-radius: 50px;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.theme h4 {
+  color: var(--pri);
+  font-weight: 700;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+nav .nav-in h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.theme:active {
+  scale: 0.96;
+}
