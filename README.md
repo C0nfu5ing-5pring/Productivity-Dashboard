@@ -7,7 +7,6 @@ A sleek, responsive web dashboard designed to help you stay on top of your tasks
 - **Intuitive UI**: User-friendly layout for easy navigation.
 - **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
 - **Customizable Components**: Easily modify fonts, colors, and layouts to suit your preferences.
-- **Interactive Elements**: Dynamic charts and progress bars to track your productivity.
 
 ## 📁 Project Structure
 
