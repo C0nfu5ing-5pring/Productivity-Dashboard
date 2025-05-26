@@ -176,12 +176,12 @@ function pomodoroTimer() {
         } else {
           isWorkSession = true;
           clearInterval(timerInterval);
-          timer.innerHTML = "25:00";
+          timer.innerHTML = "45:00";
           session.innerHTML = "Work Session";
           session.style.backgroundColor = "lightseagreen";
-          totalSeconds = 25 * 60;
+          totalSeconds = 45 * 60;
         }
-      }, 10);
+      }, 1000);
     }
   }
 
