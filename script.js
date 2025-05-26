@@ -134,7 +134,7 @@ function motivationalQuote() {
 }
 
 function pomodoroTimer() {
-  let totalSeconds = 1500;
+  let totalSeconds = 45 * 60;
   let timer = document.querySelector(".pomo-timer h1");
   let startBtn = document.querySelector(".start-timer");
   let pauseBtn = document.querySelector(".pause-timer");
